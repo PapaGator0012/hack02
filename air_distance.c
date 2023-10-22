@@ -31,10 +31,20 @@ longOrigin=(longOrigin*pi)/180;
 latDestination=(latDestination*pi)/180;
 longDestination=(longDestination*pi)/180;
 
+// for finding delta values
 
+delta=longDestination-longOrigin;
 
+//finding distance using spherical law of cosine
 
+distance=acos(sin(latDestination)*sin(longOrigin)+cod(latOrigin)*cos(latDestination)*cos(delta))*radius;
 
+// change radion into degree
+
+printf("Origin: (%f,%f)\n Destination: (%f,%f)\n",latOrigin*180/pi,longOrigin*180/pi,latDestination*180/pi,longDestination*180/pi);
+
+printf("air distance is %f \n",distance);
+return 0;
     
 
 
