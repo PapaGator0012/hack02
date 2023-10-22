@@ -1,13 +1,13 @@
 #include<stdio.h>
 #include<math.h>
-#include < stdlib.h>
+#include <stdlib.h>
 int main()
 {
 
 float latOrigin,longOrigin,latDestination,longDestination;
 float distance,delta;
 const float pi=3.14;  // constant > holds value for pi
-const float radius= 6371.0 // constant > holds value of radius of earth
+const float radius= 6371.0 ;// constant > holds value of radius of earth
 
 // input values from users
 // the input values are assumed as degrees
@@ -24,6 +24,12 @@ scanf("%f",&longDestination);
 
 // using a mathematical formula radian=pi/180
 
+// using the user defined value and storing new value init
+
+latOrigin=(latOrigin*pi)/180;
+longOrigin=(longOrigin*pi)/180;
+latDestination=(latDestination*pi)/180;
+longDestination=(longDestination*pi)/180;
 
 
 
